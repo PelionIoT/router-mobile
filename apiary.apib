@@ -43,6 +43,24 @@ Get the name and password for your wifi.
             "name": "gondor",
             "password": "gondoran"
         }
+        
+### Pair account with router [PUT]
+
+Pair the router with user account and retrieve a secret
+
++ Request (application/json)
+
+            {
+                "routerID": "almdlame23kl2weml",
+                "userName": "Ronan"
+            }
+
++ Response 200 (application/json)
++           
+            {
+                "secret": "asdadewdae23e2qe"
+            }
+
 
 ## Devices [/devices]
 
