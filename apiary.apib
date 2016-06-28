@@ -1,0 +1,69 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# WigWag Router v1.0
+
+REST APIs involved in onboarding, configuring and using the WigWag Router.
+
+
+## OOB Configuration [/config/wifi]
+
+### Set Wifi Name and Password [PUT]
+
+Set the name and password for your wifi.
+
++ Request (application/json)
+    
+    + Headers
+
+            X-Auth-Token: "secretkey"
+
+    + Body
+
+            {
+                "name": "gondor",
+                "password": "gondoran"
+            }
+
++ Response 201 (application/json)
+
+### Get Wifi Name and Password [GET]
+
+Get the name and password for your wifi.
+
++ Request (application/json)
+    
+    + Headers
+
+            X-Auth-Token: "secretkey"
+
++ Response 200 (application/json)
+
+        {
+            "name": "gondor",
+            "password": "gondoran"
+        }
+
+## Devices [/devices]
+
+APIs dealing with devices on the router
+
+### Get Devices [GET]
+
++ Response 200 (application/json)
+
+## Users [/users]
+
+APIs dealing with users on the router
+
+### Get Users [GET]
+
++ Response 200 (application/json)
+
+## Guest Configuration [/config/wifi/guest]
+
+APIs dealing with guest configuration on the router
+
+### Get Guest Configuration [GET]
+
++ Response 200 (application/json)
