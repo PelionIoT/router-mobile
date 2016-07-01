@@ -62,14 +62,37 @@ Pair the router with user account and retrieve a secret
             }
 
 
-## Devices [/devices]
+## Wifi Devices [/wifi/devices]
 
 APIs dealing with devices on the router
 
-### Get Devices [GET]
+### Get Wifi Devices [GET]
+
+Get a list of devices connected to wifi.
+
++ Request (application/json)
+    
+    + Headers
+
+            X-Auth-Token: "secretkey"
 
 + Response 200 (application/json)
 
+        {
+            devices: [ 
+                { 
+                    ifname: 'wlp3s0',
+                    mac_addr: '24:da:9b:8e:c5:91',
+                    signal: 218,
+                    tx_bytes: 2390,
+                    rx_bytes: 3205,
+                    rx_packets: 65,
+                    tx_packets: 17,
+                    tx_failed: 0 
+                } 
+            ]
+        }
+        
 ## Users [/users]
 
 APIs dealing with users on the router
